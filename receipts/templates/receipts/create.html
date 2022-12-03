@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Create
+{% endblock title %}
+
+{% block content %}
+
+<main>
+    <div>
+        <h1>
+            Create
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+    </div>
+</main>
+
+{% endblock content %}
